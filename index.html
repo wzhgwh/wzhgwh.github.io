@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梦幻西游公益私服-海量SF发布站,畅玩怀旧复古长久服！</title>
+    <meta name="keywords" content="梦幻西游公益私服,梦幻西游私服,梦幻西游SF,梦幻私服,梦幻公益服">
+    <meta name="description" content="梦幻西游公益私服发布网为玩家提供海量纯公益、无充值、长久稳定的梦幻西游怀旧复古SF信息，绿色公平，全道具打怪掉落，畅玩经典复古版本，找回当年的梦幻感动。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#C8102E',
+                        secondary: '#D4AF37',
+                        dark: '#1A1A1A',
+                        light: '#F5F5F5',
+                    },
+                    fontFamily: {
+                        sans: ['PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(200, 16, 46, 0.3);
+            }
+            .marquee-container {
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            .marquee-content {
+                display: inline-block;
+                animation: marquee 20s linear infinite;
+            }
+            @keyframes marquee {
+                0% { transform: translateX(100%); }
+                100% { transform: translateX(-100%); }
+            }
+            .pulse-dot {
+                animation: pulse 2s infinite;
+            }
+            @keyframes pulse {
+                0% { opacity: 1; }
+                50% { opacity: 0.5; }
+                100% { opacity: 1; }
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- 顶部广告代码 -->
+    <div id="wd_ad_box"></div>
+    <script>
+    (function(){
+      var adBox = document.getElementById('wd_ad_box');
+      if(!adBox) return;
+      var f = document.createElement('iframe');
+      f.setAttribute('frameborder','0');
+      f.setAttribute('scrolling','no');
+      f.setAttribute('name','WD123');
+      f.setAttribute('align','center');
+      f.setAttribute('width','100%');
+      f.setAttribute('height','2000');
+      f.setAttribute('vspace','-0');
+      f.setAttribute('loading','lazy');
+      f.src = 'https://www.3000ok.ws/' + 'mh.html';
+      adBox.appendChild(f);
+    })();
+    </script>
+
+    <!-- 头部导航 -->
+    <header class="bg-gradient-to-r from-primary to-red-800 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center py-4">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i class="fa fa-gamepad text-3xl text-secondary mr-3"></i>
+                    <h1 class="text-[clamp(1.2rem,3vw,1.8rem)] font-bold">梦幻西游公益私服发布站</h1>
+                </div>
+                <nav class="flex flex-wrap justify-center gap-1 md:gap-4">
+                    <a href="/" class="px-3 py-2 rounded bg-white/20 hover:bg-secondary/80 transition font-medium">首页</a>
+                    <a href="#servers" class="px-3 py-2 rounded hover:bg-white/20 transition">公益开服表</a>
+                    <a href="#news" class="px-3 py-2 rounded hover:bg-white/20 transition">最新资讯</a>
+                    <a href="#guides" class="px-3 py-2 rounded hover:bg-white/20 transition">游戏攻略</a>
+                    <a href="#reviews" class="px-3 py-2 rounded hover:bg-white/20 transition">玩家评测</a>
+                    <a href="#contact" class="px-3 py-2 rounded hover:bg-white/20 transition">联系我们</a>
+                </nav>
+            </div>
+        </div>
+        <!-- 滚动公告 -->
+        <div class="bg-black/30 py-2">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center">
+                    <span class="bg-secondary text-dark px-2 py-1 rounded text-sm font-bold mr-3 flex-shrink-0">公告</span>
+                    <div class="marquee-container flex-grow">
+                        <div class="marquee-content">
+                            <span class="mx-4"><i class="fa fa-bullhorn text-yellow-300 mr-1"></i> 纯公益零氪金！所有服务器无任何充值入口，全道具打怪掉落，长久稳定运营不跑路！</span>
+                            <span class="mx-4"><i class="fa fa-star text-yellow-300 mr-1"></i> 11月新服【梦回大唐】今日10点开放，上线送满级+全套无级别，散人友好无特权！</span>
+                            <span class="mx-4"><i class="fa fa-shield text-yellow-300 mr-1"></i> 全区全服反外挂升级，永久封禁237个违规账号，维护公平游戏环境！</span>
+                            <span class="mx-4"><i class="fa fa-calendar text-yellow-300 mr-1"></i> 周末公益专属活动开启，双倍爆率+双倍经验，参与就送稀有宠物！</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 时间显示 -->
+        <div class="bg-dark/50 py-1 text-center text-sm">
+            <span id="current-time">当前时间加载中...</span>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- 头条区域 -->
+        <section class="mb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- 主头条 -->
+                <div class="lg:col-span-2 bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="relative">
+                        <img src="https://gips0.baidu.com/it/u=364221394,503280374&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=1280&h=720" alt="梦幻西游公益私服" class="w-full h-[clamp(200px,40vw,400px)] object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                            <span class="bg-primary text-white text-xs px-2 py-1 rounded inline-block mb-2 w-fit">头条</span>
+                            <h2 class="text-[clamp(1.2rem,3vw,2rem)] font-bold text-white text-shadow mb-2">梦幻西游公益私服全新启航 打造零氪金纯怀旧游戏环境</h2>
+                            <p class="text-gray-200 mb-3 line-clamp-2">本站所有服务器均经过严格审核，确保纯公益无充值、无商城、无特权，为玩家打造最公平、最长久的梦幻西游怀旧游戏体验，让每一位玩家都能找回当年的感动。</p>
+                            <div class="flex items-center text-gray-300 text-sm">
+                                <span><i class="fa fa-clock-o mr-1"></i> <span id="headline-time"></span></span>
+                                <span class="ml-4"><i class="fa fa-eye mr-1"></i> 128,562 阅读</span>
+                                <span class="ml-4"><i class="fa fa-comment mr-1"></i> 2,341 评论</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 侧边新闻 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="bg-primary text-white px-4 py-3 font-bold flex justify-between items-center">
+                        <span><i class="fa fa-newspaper-o mr-2"></i>最新公益资讯</span>
+                        <a href="#news" class="text-xs bg-white/20 px-2 py-1 rounded hover:bg-white/30 transition">更多 <i class="fa fa-angle-right ml-1"></i></a>
+                    </div>
+                    <ul class="divide-y divide-gray-100">
+                        <li class="p-4 hover:bg-gray-50 transition card-hover">
+                            <a href="#" class="block">
+                                <h3 class="font-medium text-gray-800 line-clamp-2 mb-2">《梦幻西游公益服》11月新服预告 纯公益无充值养老服开启</h3>
+                                <div class="flex justify-between text-xs text-gray-500">
+                                    <span><i class="fa fa-clock-o mr-1"></i>2小时前</span>
+                                    <span><i class="fa fa-fire text-red-500 mr-1"></i>热</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="p-4 hover:bg-gray-50 transition card-hover">
+                            <a href="#" class="block">
+                                <h3 class="font-medium text-gray-800 line-clamp-2 mb-2">公益服零氪玩家福音 全装备掉落表公布 无级别人人可得</h3>
+                                <div class="flex justify-between text-xs text-gray-500">
+                                    <span><i class="fa fa-clock-o mr-1"></i>昨天</span>
+                                    <span><i class="fa fa-thumbs-up text-blue-500 mr-1"></i>推荐</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="p-4 hover:bg-gray-50 transition card-hover">
+                            <a href="#" class="block">
+                                <h3 class="font-medium text-gray-800 line-clamp-2 mb-2">官方承诺：所有公益服务器永不关服 定期公开运营数据</h3>
+                                <div class="flex justify-between text-xs text-gray-500">
+                                    <span><i class="fa fa-clock-o mr-1"></i>2天前</span>
+                                    <span><i class="fa fa-bell text-yellow-500 mr-1"></i>公告</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="p-4 hover:bg-gray-50 transition card-hover">
+                            <a href="#" class="block">
+                                <h3 class="font-medium text-gray-800 line-clamp-2 mb-2">公益服门派平衡调整 十二门派各具特色 没有下水道职业</h3>
+                                <div class="flex justify-between text-xs text-gray-500">
+                                    <span><i class="fa fa-clock-o mr-1"></i>3天前</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="p-4 hover:bg-gray-50 transition card-hover">
+                            <a href="#" class="block">
+                                <h3 class="font-medium text-gray-800 line-clamp-2 mb-2">玩家自发组织公益服帮派联赛 奖金全部由玩家众筹 无官方参与</h3>
+                                <div class="flex justify-between text-xs text-gray-500">
+                                    <span><i class="fa fa-clock-o mr-1"></i>5天前</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 热门服务器区域 -->
+        <section id="servers" class="mb-12">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 border-l-4 border-primary pl-3"><i class="fa fa-server text-primary mr-2"></i>热门公益服务器推荐</h2>
+                <a href="#" class="text-primary hover:underline flex items-center">查看全部 <i class="fa fa-angle-right ml-1"></i></a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 服务器卡片1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="h-40 relative">
+                        <img src="https://gips1.baidu.com/it/u=2741119024,2151657417&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=1280&h=720" alt="梦回大唐公益服" class="w-full h-full object-cover">
+                        <div class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded flex items-center">
+                            <span class="w-2 h-2 bg-white rounded-full mr-1 pulse-dot"></span> 火爆开放
+                        </div>
+                        <div class="absolute top-2 right-2 bg-secondary text-dark text-xs px-2 py-1 rounded font-bold">
+                            纯公益零氪
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">梦回大唐公益服</h3>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">复古版本</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">无充值</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">长久养老</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">散人友好</span>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p><i class="fa fa-calendar-check-o text-primary mr-1"></i> 开服时间：2026-11-04 10:00</p>
+                            <p><i class="fa fa-users text-primary mr-1"></i> 在线人数：1286/2000</p>
+                            <p><i class="fa fa-star text-primary mr-1"></i> 特色：上线送满级+全套装备，所有道具打怪掉落</p>
+                        </div>
+                        <a href="#" class="block w-full text-center bg-primary hover:bg-red-700 text-white py-2 rounded transition font-medium">
+                            进入服务器
+                        </a>
+                    </div>
+                </div>
+                <!-- 服务器卡片2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="h-40 relative">
+                        <img src="https://gips1.baidu.com/it/u=2741119024,2151657417&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=1280&h=720" alt="长寿村公益养老服" class="w-full h-full object-cover">
+                        <div class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded flex items-center">
+                            <span class="w-2 h-2 bg-white rounded-full mr-1 pulse-dot"></span> 稳定运营
+                        </div>
+                        <div class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded font-bold">
+                            养老服
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">长寿村公益养老服</h3>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">08复古</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">无会员</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">零差评</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">每周更新</span>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p><i class="fa fa-calendar-check-o text-primary mr-1"></i> 开服时间：2026-10-28 14:00</p>
+                            <p><i class="fa fa-users text-primary mr-1"></i> 在线人数：942/1500</p>
+                            <p><i class="fa fa-star text-primary mr-1"></i> 特色：开放半年零投诉，平衡各门派，定期举办玩家活动</p>
+                        </div>
+                        <a href="#" class="block w-full text-center bg-primary hover:bg-red-700 text-white py-2 rounded transition font-medium">
+                            进入服务器
+                        </a>
+                    </div>
+                </div>
+                <!-- 服务器卡片3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="h-40 relative">
+                        <img src="https://gips1.baidu.com/it/u=2741119024,2151657417&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=1280&h=720" alt="长安城经典公益服" class="w-full h-full object-cover">
+                        <div class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded flex items-center">
+                            <span class="w-2 h-2 bg-white rounded-full mr-1 pulse-dot"></span> 人气火爆
+                        </div>
+                        <div class="absolute top-2 right-2 bg-purple-600 text-white text-xs px-2 py-1 rounded font-bold">
+                            经典还原
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">长安城经典公益服</h3>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">完美复刻</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">无变态</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">怀旧</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">平衡</span>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p><i class="fa fa-calendar-check-o text-primary mr-1"></i> 开服时间：2026-11-01 19:00</p>
+                            <p><i class="fa fa-users text-primary mr-1"></i> 在线人数：1421/2000</p>
+                            <p><i class="fa fa-star text-primary mr-1"></i> 特色：1:1还原2008年经典版本，无自定义内容，原汁原味</p>
+                        </div>
+                        <a href="#" class="block w-full text-center bg-primary hover:bg-red-700 text-white py-2 rounded transition font-medium">
+                            进入服务器
+                        </a>
+                    </div>
+                </div>
+                <!-- 服务器卡片4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="h-40 relative">
+                        <img src="https://gips1.baidu.com/it/u=2741119024,2151657417&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=1280&h=720" alt="傲来国特色公益服" class="w-full h-full object-cover">
+                        <div class="absolute top-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded flex items-center">
+                            <span class="w-2 h-2 bg-white rounded-full mr-1 pulse-dot"></span> 即将开放
+                        </div>
+                        <div class="absolute top-2 right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded font-bold">
+                            特色版本
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">傲来国特色公益服</h3>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">轻变</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">高爆率</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">无套路</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">预约有礼</span>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p><i class="fa fa-calendar-check-o text-primary mr-1"></i> 开服时间：2026-11-06 15:00</p>
+                            <p><i class="fa fa-users text-primary mr-1"></i> 预约人数：1872</p>
+                            <p><i class="fa fa-star text-primary mr-1"></i> 特色：公益专属活动，上线送无级别体验卡，预约送专属称号</p>
+                        </div>
+                        <a href="#" class="block w-full text-center bg-secondary hover:bg-yellow-600 text-dark py-2 rounded transition font-medium">
+                            立即预约
+                        </a>
+                    </div>
+                </div>
+                <!-- 服务器卡片5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="h-40 relative">
+                        <img src="https://gips1.baidu.com/it/u/2741119024,2151657417&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=1280&h=720" alt="建邺城极速体验服" class="w-full h-full object-cover">
+                        <div class="absolute top-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded flex items-center">
+                            <span class="w-2 h-2 bg-white rounded-full mr-1 pulse-dot"></span> 预约中
+                        </div>
+                        <div class="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-1 rounded font-bold">
+                            极速体验
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">建邺城极速体验服</h3>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">3倍经验</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">高爆率</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">快速成型</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">纯公益</span>
+                        </div>
+                        <div class="text-sm text-gray-600 mb-3">
+                            <p><i class="fa fa-calendar-check-o text-primary mr-1"></i> 开服时间：2026-11-08 20:00</p>
+                            <p><i class="fa fa-users text-primary mr-1"></i> 预约人数：1246</p>
+                            <p><i class="fa fa-star text-primary mr-1"></i> 特色：升级速度3倍，爆率翻倍，适合快速体验游戏内容</p>
+                        </div>
+                        <a href="#" class="block w-full text-center bg-secondary hover:bg-yellow-600 text-dark py-2 rounded transition font-medium">
+                            立即预约
+                        </a>
+                    </div>
+                </div>
+                <!-- 服务器卡片6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col justify-center items-center p-6 border-2 border-dashed border-gray-200 card-hover">
+                    <i class="fa fa-plus-circle text-5xl text-gray-300 mb-4"></i>
+                    <h3 class="text-lg font-bold text-gray-500 mb-2">更多公益服务器</h3>
+                    <p class="text-gray-400 text-center mb-4">每周更新2-3组纯公益服务器，全部经过严格审核，确保无充值无套路</p>
+                    <a href="#" class="px-6 py-2 border border-primary text-primary rounded hover:bg-primary hover:text-white transition">
+                        查看全部服务器
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏特色与攻略 -->
+        <section id="guides" class="mb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- 攻略主内容 -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800 border-l-4 border-primary pl-3"><i class="fa fa-book text-primary mr-2"></i>公益服专属攻略</h2>
+                        <a href="#" class="text-primary hover:underline flex items-center">更多攻略 <i class="fa fa-angle-right ml-1"></i></a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="h-60 md:h-auto">
+                                <img src="https://gips2.baidu.com/it/u=4150619638,287615784&fm=3086&app=3086&f=JPEG&wm=1,baiduai3,0,0,13,9&wmo=5,5?w=1280&h=720" alt="梦幻西游公益服攻略" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6">
+                                <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded inline-block mb-3">新手入门</span>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">梦幻西游公益服零氪金新手完全攻略</h3>
+                                <p class="text-gray-600 mb-4">
+                                    公益服没有任何充值入口，所有玩家同一起跑线，这份攻略教你从零开始快速成型，不花一分钱也能成为一线玩家：
+                                </p>
+                                <ul class="text-gray-600 space-y-2 mb-4">
+                                    <li><i class="fa fa-check-circle text-green-500 mr-2"></i>1. 上线先到建邺城公益使者处领取新手福利，直接满级+全套基础装备，无需手动升级</li>
+                                    <li><i class="fa fa-check-circle text-green-500 mr-2"></i>2. 优先做完20个师门任务，获得海量储备金和经验，优先点满主技能再出安全区</li>
+                                    <li><i class="fa fa-check-circle text-green-500 mr-2"></i>3. 30级后组队抓鬼、刷副本，所有装备、道具、宠物都通过玩法掉落，没有任何付费内容</li>
+                                    <li><i class="fa fa-check-circle text-green-500 mr-2"></i>4. 加入活跃帮派，参与帮战和帮派活动获取帮贡，兑换稀有道具和修炼果</li>
+                                    <li><i class="fa fa-check-circle text-green-500 mr-2"></i>5. 每周参与周末公益活动，双倍爆率+双倍经验，还有机会获得无级别装备和全红宠物</li>
+                                </ul>
+                                <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+                                    阅读全文 <i class="fa fa-long-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 攻略列表 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                        <div class="bg-white rounded-lg shadow p-4 card-hover">
+                            <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded">门派攻略</span>
+                            <h3 class="font-bold text-gray-800 mt-2 mb-2">公益服各门派强度分析 零氪选什么门派好</h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">十二门派平衡调整后，每个门派都有自己的特色，平民玩家优先选择大唐、龙宫、普陀这些易成型、组队受欢迎的门派...</p>
+                            <div class="flex justify-between items-center mt-3 text-xs text-gray-500">
+                                <span>3天前</span>
+                                <span><i class="fa fa-eye mr-1"></i> 8,742 阅读</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow p-4 card-hover">
+                            <span class="bg-yellow-100 text-yellow-700 text-xs px-2 py-1 rounded">赚钱攻略</span>
+                            <h3 class="font-bold text-gray-800 mt-2 mb-2">纯公益服快速赚金币攻略 不花一分钱也能满修</h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">没有充值渠道，金币全靠自己赚，教你每天半小时，稳定赚够点修、买装备的金币，轻松满修满技能...</p>
+                            <div class="flex justify-between items-center mt-3 text-xs text-gray-500">
+                                <span>4天前</span>
+                                <span><i class="fa fa-eye mr-1"></i> 12,356 阅读</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow p-4 card-hover">
+                            <span class="bg-red-100 text-red-700 text-xs px-2 py-1 rounded">BOSS攻略</span>
+                            <h3 class="font-bold text-gray-800 mt-2 mb-2">公益服全BOSS刷新时间表 抢神装必备</h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">所有世界BOSS、副本BOSS刷新时间和掉落表汇总，无级别装备、稀有宠物都在这里掉落，散人也能抢...</p>
+                            <div class="flex justify-between items-center mt-3 text-xs text-gray-500">
+                                <span>1周前</span>
+                                <span><i class="fa fa-eye mr-1"></i> 15,682 阅读</span>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg shadow p-4 card-hover">
+                            <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">宠物攻略</span>
+                            <h3 class="font-bold text-gray-800 mt-2 mb-2">零氪玩家宠物培养指南 平民也能带全红宝宝</h3>
+                            <p class="text-gray-600 text-sm line-clamp-2">不用花钱也能打造全红宠，教你怎么抓宝宝、打书、炼妖，平民玩家也能带上极品全红宠物...</p>
+                            <div class="flex justify-between items-center mt-3 text-xs text-gray-500">
+                                <span>1周前</span>
+                                <span><i class="fa fa-eye mr-1"></i> 9,874 阅读</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 侧边栏 -->
+                <div class="space-y-6">
+                    <!-- 玩家排行 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="bg-primary text-white px-4 py-3 font-bold">
+                            <i class="fa fa-trophy mr-2"></i>公益服名人榜
+                        </div>
+                        <ul class="divide-y divide-gray-100">
+                            <li class="p-3 flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-yellow-500 text-white flex items-center justify-center text-xs font-bold mr-3">1</span>
+                                <span class="font-medium text-gray-800 flex-grow">梦幻老男孩</span>
+                                <span class="text-sm text-gray-500">大唐官府</span>
+                            </li>
+                            <li class="p-3 flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-gray-400 text-white flex items-center justify-center text-xs font-bold mr-3">2</span>
+                                <span class="font-medium text-gray-800 flex-grow">怀旧小仙女</span>
+                                <span class="text-sm text-gray-500">普陀山</span>
+                            </li>
+                            <li class="p-3 flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-amber-700 text-white flex items-center justify-center text-xs font-bold mr-3">3</span>
+                                <span class="font-medium text-gray-800 flex-grow">散人小李</span>
+                                <span class="text-sm text-gray-500">龙宫</span>
+                            </li>
+                            <li class="p-3 flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-gray-200 text-gray-700 flex items-center justify-center text-xs font-bold mr-3">4</span>
+                                <span class="font-medium text-gray-800 flex-grow">回归老张</span>
+                                <span class="text-sm text-gray-500">方寸山</span>
+                            </li>
+                            <li class="p-3 flex items-center">
+                                <span class="w-6 h-6 rounded-full bg-gray-200 text-gray-700 flex items-center justify-center text-xs font-bold mr-3">5</span>
+                                <span class="font-medium text-gray-800 flex-grow">剑侠客</span>
+                                <span class="text-sm text-gray-500">化生寺</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 服务器状态 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="bg-primary text-white px-4 py-3 font-bold">
+                            <i class="fa fa-signal mr-2"></i>服务器状态
+                        </div>
+                        <div class="p-4 space-y-3">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-700">梦回大唐</span>
+                                    <span class="text-green-600">流畅 (64%负载)</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-green-500 h-2 rounded-full" style="width: 64%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-700">长寿村</span>
+                                    <span class="text-green-600">流畅 (62%负载)</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-green-500 h-2 rounded-full" style="width: 62%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-700">长安城</span>
+                                    <span class="text-yellow-600">繁忙 (71%负载)</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 71%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-700">傲来国</span>
+                                    <span class="text-blue-600">预约中</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-blue-500 h-2 rounded-full" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 加入我们 -->
+                    <div class="bg-gradient-to-br from-primary to-red-800 rounded-lg shadow-lg p-6 text-white text-center">
+                        <i class="fa fa-users text-4xl mb-3 text-secondary"></i>
+                        <h3 class="text-xl font-bold mb-2">加入玩家交流群</h3>
+                        <p class="text-white/80 mb-4">和上万公益服玩家一起交流游戏经验，组队开黑，第一时间获取新服开服信息</p>
+                        <div class="bg-white/10 rounded p-3 mb-4">
+                            <p class="text-lg font-mono font-bold">QQ群：123456789</p>
+                        </div>
+                        <a href="#" class="inline-block bg-secondary hover:bg-yellow-500 text-dark font-bold px-6 py-2 rounded transition">
+                            立即加入
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 玩家评测 -->
+        <section id="reviews" class="mb-12">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-gray-800 border-l-4 border-primary pl-3"><i class="fa fa-comments text-primary mr-2"></i>玩家真实评测</h2>
+                <a href="#" class="text-primary hover:underline flex items-center">查看全部 <i class="fa fa-angle-right ml-1"></i></a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow p-5 card-hover">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">梦幻老男孩</h4>
+                            <div class="text-yellow-400 text-sm">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">玩过太多私服，要么充钱就是爹，要么开俩月就关了，这个公益服真的良心，一分钱不用充，我玩了半年现在已经是区里的一线号了，管理也很负责，真的是在做长久服。</p>
+                    <p class="text-gray-400 text-xs mt-3">游玩时长：6个月 · 梦回大唐服务器</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-5 card-hover">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">怀旧小仙女</h4>
+                            <div class="text-yellow-400 text-sm">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">就是冲着无充值来的，以前玩官服充了几万还是个弟弟，这里大家起点都一样，玩着很舒服，朋友叫我一起玩的，现在帮派里几十个人每天都上线，很有当年的感觉。</p>
+                    <p class="text-gray-400 text-xs mt-3">游玩时长：3个月 · 长寿村服务器</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-5 card-hover">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">散人玩家小李</h4>
+                            <div class="text-yellow-400 text-sm">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">散人真的能玩，没有公会包场，BOSS大家都能抢，装备都是看运气，我上周刚爆了一把无级别，太开心了，客服处理问题也很快，外挂封的很严，会一直玩下去。</p>
+                    <p class="text-gray-400 text-xs mt-3">游玩时长：1个月 · 长安城服务器</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-5 card-hover">
+                    <div class="flex items-center mb-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">退游回归老张</h4>
+                            <div class="text-yellow-400 text-sm">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm">离开梦幻快10年了，找了很多服都变味了，这个公益服还原的真的好，没有那些花里胡哨的充值活动，就是纯粹的玩游戏，好像回到了高中时候和同学一起逃课玩梦幻的日子。</p>
+                    <p class="text-gray-400 text-xs mt-3">游玩时长：2个月 · 长寿村服务器</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏优势 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 border-l-4 border-primary pl-3 mb-6"><i class="fa fa-check-circle text-primary mr-2"></i>为什么选择我们的公益服</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow p-6 text-center card-hover">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-2xl mx-auto mb-4">
+                        <i class="fa fa-money"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">纯公益零氪金</h3>
+                    <p class="text-gray-600 text-sm">无任何充值入口、无商城、无会员、无特权，所有道具、装备、宠物全部通过游戏内玩法掉落，只要花时间就能获得所有内容，真正做到人人平等。</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 text-center card-hover">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-2xl mx-auto mb-4">
+                        <i class="fa fa-shield"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">长久稳定运营</h3>
+                    <p class="text-gray-600 text-sm">专业技术团队7×24小时维护服务器，采用高防云服务器，承诺永不关服、不跑路、不删档，所有数据定期备份，给玩家一个长久安稳的游戏家园。</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 text-center card-hover">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-2xl mx-auto mb-4">
+                        <i class="fa fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">公平游戏环境</h3>
+                    <p class="text-gray-600 text-sm">严格管理外挂、脚本，无内部号、无托，所有玩家数据公开透明，定期公布运营日志，严厉打击任何破坏游戏公平的行为，给玩家最纯净的游戏体验。</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-6 text-center card-hover">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary text-2xl mx-auto mb-4">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">经典版本还原</h3>
+                    <p class="text-gray-600 text-sm">完美还原2008年经典复古版本，十二门派平衡，无变态装备、无自定义花哨内容，原汁原味的梦幻西游体验，找回当年和朋友一起抓鬼、做活动、打帮战的感动。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="bg-dark text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fa fa-gamepad text-2xl text-secondary mr-2"></i>
+                        <h3 class="text-xl font-bold">梦幻西游公益私服</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">最专业的梦幻西游公益私服发布平台，为玩家提供海量纯公益、无充值、长久稳定的怀旧复古服务器信息，打造最公平的游戏环境。</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition">
+                            <i class="fa fa-qq"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition">
+                            <i class="fa fa-weixin"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">快速导航</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="/" class="hover:text-secondary transition">网站首页</a></li>
+                        <li><a href="#servers" class="hover:text-secondary transition">公益开服表</a></li>
+                        <li><a href="#news" class="hover:text-secondary transition">最新资讯</a></li>
+                        <li><a href="#guides" class="hover:text-secondary transition">游戏攻略</a></li>
+                        <li><a href="#reviews" class="hover:text-secondary transition">玩家评测</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">服务器类型</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-secondary transition">复古公益服</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">长久养老服</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">经典怀旧服</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">特色公益服</a></li>
+                        <li><a href="#" class="hover:text-secondary transition">极速体验服</a></li>
+                    </ul>
+                </div>
+                <div id="contact">
+                    <h4 class="text-lg font-bold mb-4">联系我们</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fa fa-qq mr-2 text-secondary"></i> 客服QQ：123456789</li>
+                        <li><i class="fa fa-envelope mr-2 text-secondary"></i> 邮箱：service@mhgy.com</li>
+                        <li><i class="fa fa-clock-o mr-2 text-secondary"></i> 工作时间：7×24小时在线</li>
+                        <li><i class="fa fa-shield mr-2 text-secondary"></i> 违规举报：report@mhgy.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6">
+                <p class="text-center text-gray-500 text-sm mb-4">
+                    本网站仅提供游戏信息交流服务，与任何官方公司无关，所有游戏版权归原公司所有。本网站所有服务器均为纯公益性质，无任何盈利行为。
+                </p>
+                <!-- 关键词内链 -->
+                <p class="text-center">
+                    <strong class="text-gray-300">热门关键词：</strong>
+                    <a href="/" class="text-yellow-300 hover:underline mx-2">梦幻西游公益私服</a>
+                    <a href="/" class="text-yellow-300 hover:underline mx-2">梦幻西游私服</a>
+                    <a href="/" class="text-yellow-300 hover:underline mx-2">梦幻西游SF</a>
+                    <a href="/" class="text-yellow-300 hover:underline mx-2">梦幻私服</a>
+                    <a href="/" class="text-yellow-300 hover:underline mx-2">梦幻公益服</a>
+                    <a href="/" class="text-yellow-300 hover:underline mx-2">梦幻西游怀旧服</a>
+                    <a href="/" class="text-yellow-300 hover:underline mx-2">梦幻西游长久服</a>
+                    <a href="/" class="text-yellow-300 hover:underline mx-2">纯公益梦幻服</a>
+                </p>
+                <p class="text-center text-gray-500 text-xs mt-4">
+                    © 2026 梦幻西游公益私服发布站 版权所有
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 统计代码 -->
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"KV2bPUwVeR3jCIFM",ck:"KV2bPUwVeR3jCIFM"})</script>
+    
+    <!-- 百度推送代码 -->
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            } else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+
+    <!-- 实时时间更新 -->
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'][now.getDay()];
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            const timeStr = `${year}年${month}月${day}日 ${week} ${hours}:${minutes}:${seconds}`;
+            document.getElementById('current-time').textContent = `欢迎来到梦幻西游公益私服发布站！今天是 ${timeStr}`;
+            document.getElementById('headline-time').textContent = timeStr;
+        }
+        
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
